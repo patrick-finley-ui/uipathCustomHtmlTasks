@@ -33,7 +33,7 @@ This section will help you set up your workspace and get the necessary files to 
     * Go to **File** > **Open Folder** and select the unzipped project folder.
 
 4.  **Customize the Prompt:**
-    * Inside the project folder, you will find a file named `prompt.md`.
+    * Inside the project folder, you will find a file named `promptExample.md`.
     * Open this file. It contains the prompt template you'll use.
     * **Adjust the template** by filling in the details for your specific task, including the name of the user, the variables you need to pass in and out, and the actions required.
 
@@ -44,7 +44,7 @@ This section will help you set up your workspace and get the necessary files to 
 This is where the magic happens. You'll use your prepared prompt to direct the AI agent in building the component.
 
 1.  **Start the Agent:** Open the AI chat panel within your IDE. In Cursor, for instance, you'll use the main chat window.
-2.  **Copy and Paste the Prompt:** Copy the customized prompt from your `prompt.md` file. Paste the entire content into the chat and press Enter. The AI will start building the code for your component.
+2.  **Copy and Paste the Prompt:** Copy the customized prompt from your `promptExample.md` file. Paste the entire content into the chat and press Enter. The AI will start building the code for your component.
 3.  **Watch the Code Build:** The AI will generate the HTML, CSS, and JavaScript files directly in your project folder, adhering to the structure and rules outlined in the `UiPath_Compatibility_Analysis.md` document.
 4.  **Iterate and Refine:** The first version may not be perfect. Use the chat to provide iterative instructions to the agent.
     * **Example 1 (Design change):** "The buttons are too small. Make them more prominent and give them a green background for 'Approve' and a red background for 'Deny'."
