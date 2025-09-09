@@ -129,6 +129,7 @@ If this component is part of an **Action Center task**, you must first create an
     * Place a standard **UiPath Button** outside of your Custom HTML component. This button will be your submit button.
     * In the button's **Events** panel, configure the `Click` event.
     * Add a `Set Value` rule for each variable you want to pass out. Set the **Action Schema variable** equal to the corresponding **App variable** (e.g., `ActionSchema.finalDecision = App.finalDecision`). This correctly packages the data from your App Variables for the Orchestrator flow.
+<img width="1407" height="1437" alt="image" src="https://github.com/user-attachments/assets/d78fadca-8acd-43b6-aa03-f08094ddc18e" />
 
 
 ### Step 9: Test and Publish the Action Task
