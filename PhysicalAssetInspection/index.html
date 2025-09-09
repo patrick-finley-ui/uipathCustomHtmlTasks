@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!-- Physical Asset Inspection Component for UiPath -->
+<!-- Following UiPath_Compatibility_Analysis.md requirements -->
+<div class="container">
+    <!-- Header Section -->
+    <header class="header">
+        <h1 class="title">Physical Asset Inspection</h1>
+        <div class="status-badge" id="statusBadge">Pending Review</div>
+    </header>
+
+    <!-- Asset Details Section -->
+    <section class="asset-details">
+        <h2 class="section-title">Asset Details</h2>
+        <div class="details-grid">
+            <div class="detail-item">
+                <label class="detail-label">Asset ID:</label>
+                <span class="detail-value" id="assetID">Loading...</span>
+            </div>
+            <div class="detail-item">
+                <label class="detail-label">Asset Type:</label>
+                <span class="detail-value" id="assetType">Loading...</span>
+            </div>
+            <div class="detail-item">
+                <label class="detail-label">Discrepancy Type:</label>
+                <span class="detail-value" id="discrepancyType">Loading...</span>
+            </div>
+            <div class="detail-item">
+                <label class="detail-label">Location:</label>
+                <span class="detail-value" id="location">Loading...</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Evidence Section -->
+    <section class="evidence-section">
+        <h2 class="section-title">Evidence</h2>
+        <div class="evidence-content">
+            <!-- Asset Photo Display -->
+            <div class="photo-container" id="photoContainer">
+                <img id="assetPhoto" class="asset-photo" alt="Asset Photo" style="display: none;">
+                <div id="noPhotoMessage" class="no-photo-message">No photo available</div>
+            </div>
+
+            <!-- Conditional Upload Button - Only show if discrepancyType is "Missing Photos" -->
+            <div class="upload-section" id="uploadSection" style="display: none;">
+                <button type="button" class="upload-btn" id="uploadBtn">
+                    <span class="upload-icon">📷</span>
+                    Upload Photos
+                </button>
+                <input type="file" id="photoUpload" accept="image/*" multiple style="display: none;">
+                <div class="upload-info">Maximum file size: 1MB per image</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resolution Section -->
+    <section class="resolution-section">
+        <h2 class="section-title">Resolution Details</h2>
+
+        <!-- Conditional Serial Number Field - Only show if discrepancyType is "Incorrect Serial Number" -->
+        <div class="form-group" id="serialNumberGroup" style="display: none;">
+            <label for="updatedSerialNumber" class="form-label">Updated Serial Number:</label>
+            <input type="text" id="updatedSerialNumber" class="form-input" placeholder="Enter corrected serial number">
+        </div>
+
+        <!-- Resolution Notes -->
+        <div class="form-group">
+            <label for="resolutionNotes" class="form-label">Resolution Notes:</label>
+            <textarea id="resolutionNotes" class="form-textarea" placeholder="Enter your resolution notes here..."
+                rows="4"></textarea>
+            <div class="textarea-info">Notes will be saved when you click outside this field</div>
+        </div>
+    </section>
+
+    <!-- Action Buttons -->
+    <section class="action-section">
+        <div class="button-group">
+            <button type="button" class="btn btn-resolve" id="resolveBtn">
+                <span class="btn-icon">✅</span>
+                Resolve
+            </button>
+            <button type="button" class="btn btn-escalate" id="escalateBtn">
+                <span class="btn-icon">⚠️</span>
+                Escalate
+            </button>
+        </div>
+    </section>
+</div>
+
+<!-- Custom Modal for Confirmations -->
+<div class="modal-overlay" id="modalOverlay" style="display: none;">
+    <div class="modal">
+        <div class="modal-header">
+            <h3 class="modal-title" id="modalTitle">Confirm Action</h3>
+        </div>
+        <div class="modal-body">
+            <p class="modal-message" id="modalMessage">Are you sure you want to proceed?</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" id="modalCancel">Cancel</button>
+            <button type="button" class="btn btn-primary" id="modalConfirm">Confirm</button>
+        </div>
+    </div>
+</div>
+
+<!-- Custom Alert/Message System -->
+<div class="alert-overlay" id="alertOverlay" style="display: none;">
+    <div class="alert">
+        <div class="alert-content">
+            <p class="alert-message" id="alertMessage">Message</p>
+            <button type="button" class="btn btn-primary" id="alertOk">OK</button>
+        </div>
+    </div>
+</div>
+
+<!-- Link to external CSS and JS files -->
+<link rel="stylesheet" href="styles.css">
+<script src="script.js"></script>
