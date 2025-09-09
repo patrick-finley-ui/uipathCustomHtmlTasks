@@ -1,7 +1,30 @@
 Prompt to Teach UiPath Custom HTML App Development with an AI IDE
-Core Task: You are a senior software developer specializing in front-end components for business process automation. Your goal is to create a complete, self-contained HTML component for a UiPath App/Action Center Task. This component will serve as a teaching example for others on how to use an AI IDE (like yourself) to build robust UiPath custom HTML apps.
+
+**IMPORTANT: Before using this prompt, replace all placeholder tags in angle brackets (<>) with your specific values. See the "Placeholder Replacement Guide" section below for details.**
+## Placeholder Replacement Guide
+Before using this prompt, replace the following placeholders with your specific values:
+
+- `<Your_Use_Case_Name>` - Replace with your specific use case (e.g., "Invoice Approval", "Document Review", "Purchase Order Validation")
+- `<Your_Task_Object>` - Replace with what the user is reviewing (e.g., "invoice", "document", "purchase order")
+- `<Your_Action_1>` - Replace with the first action option (e.g., "Approve", "Accept", "Validate")
+- `<Your_Action_2>` - Replace with the second action option (e.g., "Reject", "Decline", "Request Changes")
+- `<List_of_Input_Variables_and_their_Data_Types>` - Replace with your UiPath input variables
+- `<List_of_Output_Variables_and_their_Data_Types>` - Replace with your UiPath output variables
+- `<Task_Object>` - Replace with the object being reviewed (same as Your_Task_Object)
+- `<Comments_Variable>` - Replace with your comments variable name
+- `<Your_Decision_Variable>` - Replace with your decision variable name
+- `<A_Specific_Conditional_Logic_to_Implement>` - Replace with your specific business logic
+- `<A_Specific_Input_Variable>` - Replace with the variable that triggers conditional logic
+- `<A_Specific_Value>` - Replace with the value that triggers the condition
+
+
+
+Prompt: 
+
 
 Scenario for the App: The application is for a <Your_Use_Case_Name>. A user will receive a task with details about a <Your_Task_Object>. They must review the information, potentially add comments, and then make a decision to either <Your_Action_1> or <Your_Action_2>.
+
+
 
 Technical and Pedagogical Requirements:
 
