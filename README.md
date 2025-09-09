@@ -1,70 +1,142 @@
-To Use this documentation, pull this repo or simply download and open in an AI IDE tool like Cursor or Claude Code. 
+### Transferring the Code to UiPath Action Center
 
-
-
-
-
-
-Transferring the Code to UiPath Action Center
 Once the AI IDE has provided the complete HTML, CSS, and JavaScript code in separate blocks, follow these steps to deploy it within UiPath.
 
-Step 1: Open the UiPath App
-Navigate to the UiPath App in which you want to host the custom component.
+***
 
-Go to the page or form where the component will be placed.
+### Step 1: Preview and Debug the App 🧪
 
-Step 2: Add the Custom HTML Component
-From the left-hand panel in the App designer, drag and drop a Custom HTML component onto your page.
+Before transferring the code to UiPath, you can **preview and debug** the app to ensure it works as expected. This saves time and helps you identify issues quickly.
 
-Position the component where you want your application to appear.
+* **Using an IDE Extension:** If you're using an IDE like **VS Code** or **Cursor**, you can use a live preview extension (e.g., Live Server) or the built-in `Show Preview` feature. This renders your HTML file in a browser, allowing you to see the layout and design.
+* **Debugging in Chrome:**
+    1.  Save your HTML, CSS, and JavaScript code as a single `.html` file on your computer.
+    2.  Open the file in the Chrome browser.
+    3.  Right-click anywhere on the page and select **Inspect** to open the Developer Tools.
+    4.  Go to the **Console** tab to see any JavaScript errors or `console.log` messages. This is where you can test the logic before putting it into UiPath.
 
-Step 3: Add CSS and JavaScript
-Add CSS:
+***
 
-With the Custom HTML component selected, go to the right-hand Properties panel.
+### Step 2: Open the UiPath App
 
-Find the CSS section and paste the entire CSS code block.
+Navigate to the **UiPath App** in which you want to host the custom component. Go to the page or form where the component will be placed.
 
-Add JavaScript:
+***
 
-Still in the Properties panel, find the JS section.
+### Step 3: Add the Custom HTML Component
 
-Paste the entire JavaScript code block.
+From the left-hand panel in the App designer, drag and drop a **Custom HTML** component onto your page. Position the component where you want your application to appear. 
 
-Step 4: Paste the HTML Body Content
-Find the Source field in the Properties panel.
+***
 
-Copy the content inside the <body> tag from the AI IDE's output and paste it here.
+### Step 4: Add CSS and JavaScript
 
-Step 5: Link External Resources
-In the Properties panel, use the External Scripts and External Stylesheets sections to add URLs for any external libraries.
+1.  **Add CSS:** With the Custom HTML component selected, go to the right-hand **Properties** panel. Find the **CSS** section and paste the entire CSS code block.
+2.  **Add JavaScript:** Still in the **Properties** panel, find the **JS** section and paste the entire JavaScript code block.
 
-Step 6: Configure App Variables
+***
+
+### Step 5: Paste the HTML Body Content
+
+For the HTML section on the left, Copy the content inside the `<body>` tag from the AI IDE's output and paste it here. Important: Remove any <script> tags that link to external JavaScript files (e.g., <script src="script.js">). The component handles JavaScript linking for you in the dedicated JS field.
+
+***
+
+### Step 6: Link External Resources 🔗
+
+In the **Properties** panel, use the **External Scripts** and **External Stylesheets** sections to add URLs for any external libraries.
+
+***
+
+### Step 7: Configure App Variables
+
 This is a crucial step to link the HTML component to your UiPath workflow.
 
-In the UiPath Apps designer, go to the Variables section.
+1.  In the UiPath Apps designer, go to the **Variables** section.
+2.  Create a new **App variable** for each variable specified in the AI's prompt.
+3.  Select the Custom HTML component.
+4.  In the **Properties** panel, find the **Input Properties** and **Output Properties** sections.
+5.  Add the necessary variables to these sections to establish the data flow.
 
-Create a new App variable for each variable specified in the AI's prompt.
+***
 
-Select the Custom HTML component.
+Here is the refined guide with the added flow for passing data in and out of an Action Center task.
 
-In the Properties panel, find the Input Properties and Output Properties sections.
+***
 
-Add the necessary variables to these sections to establish the data flow.
+### Transferring the Code to UiPath Action Center
 
-Step 7: Configure for Action Center (if applicable)
-If this component is part of an Action Center task, you must create an Action Schema and use a UiPath button to submit the data. The Custom HTML component's App.setVariable calls will populate the action schema variable.
+Once the AI IDE has provided the complete HTML, CSS, and JavaScript code in separate blocks, follow these steps to deploy it within UiPath.
 
-Create an Action Schema:
+***
 
-In your UiPath process, define a data structure that mirrors the variables you want to pass out. For our example, you would create an object with fields for finalDecision and reviewerComments. This structure is your Action Schema.
+### Step 1: Preview and Debug the App 🧪
 
-Use a UiPath Button:
+Before transferring the code to UiPath, you can **preview and debug** the app to ensure it works as expected. This saves time and helps you identify issues quickly.
 
-Place a standard UiPath Button outside of your Custom HTML component. This button will be your submit button.
+* **Using an IDE Extension:** If you're using an IDE like **VS Code** or **Cursor**, you can use a live preview extension (e.g., Live Server) or the built-in `Show Preview` feature. This renders your HTML file in a browser, allowing you to see the layout and design.
+* **Debugging in Chrome:**
+    1.  Save your HTML, CSS, and JavaScript code as a single `.html` file on your computer.
+    2.  Open the file in the Chrome browser.
+    3.  Right-click anywhere on the page and select **Inspect** to open the Developer Tools.
+    4.  Go to the **Console** tab to see any JavaScript errors or `console.log` messages. This is where you can test the logic before putting it into UiPath.
 
-In the button's Events panel, configure the Click event.
+***
 
-Add an Set Value rule to the button's click event. For each variable you want to pass out, set an action schema variable equal to the corresponding App variable (e.g., ActionSchema.finalDecision = App.finalDecision).
+### Step 2: Open the UiPath App
 
-This approach ensures that your data is correctly packaged and submitted back to the Orchestrator flow for processing once the user completes the action.
+Navigate to the **UiPath App** in which you want to host the custom component. Go to the page or form where the component will be placed.
+
+***
+
+### Step 3: Add the Custom HTML Component
+
+From the left-hand panel in the App designer, drag and drop a **Custom HTML** component onto your page. Position the component where you want your application to appear. 
+
+***
+
+### Step 4: Add CSS and JavaScript
+
+1.  **Add CSS:** With the Custom HTML component selected, go to the right-hand **Properties** panel. Find the **CSS** section and paste the entire CSS code block.
+2.  **Add JavaScript:** Still in the **Properties** panel, find the **JS** section and paste the entire JavaScript code block.
+
+***
+
+### Step 5: Paste the HTML Body Content
+
+Find the **Source** field in the Properties panel. Copy the content inside the `<body>` tag from the AI IDE's output and paste it here. **Important:** Remove any `<script>` tags that link to external JavaScript files (e.g., `<script src="script.js">`). The component handles JavaScript linking for you in the dedicated JS field.
+
+***
+
+### Step 6: Link External Resources 🔗
+
+In the **Properties** panel, use the **External Scripts** and **External Stylesheets** sections to add URLs for any external libraries.
+
+***
+
+### Step 7: Configure App Variables
+
+This is a crucial step to link the HTML component to your UiPath workflow.
+
+1.  In the UiPath Apps designer, go to the **Variables** section.
+2.  Create a new **App variable** for each variable specified in the AI's prompt.
+3.  Select the Custom HTML component.
+4.  In the **Properties** panel, find the **Input Properties** and **Output Properties** sections.
+5.  Add the necessary variables to these sections to establish the data flow.
+
+***
+
+### Step 8: Configure for Action Center (if applicable)
+
+If this component is part of an **Action Center task**, you must manage the data flow using a combination of the page's `On Load` event and a UiPath button.
+
+1.  **Passing Data In (on Page Load):**
+    * Go to the **Page**'s properties by selecting the page itself (not a component).
+    * In the **Events** tab, find the `On Load` event.
+    * Add a `Set Value` rule for each variable you are passing into the app from the Action Schema. Set the App variable equal to the Action Schema variable (e.g., `App.claimId = ActionSchema.claimId`). This ensures your HTML component's input variables are populated with the correct data when the user opens the task.
+
+2.  **Passing Data Out (on Submission):**
+    * Place a standard **UiPath Button** outside of your Custom HTML component. This button will be your submit button.
+    * In the button's **Events** panel, configure the `Click` event.
+    * Add a `Set Value` rule for each variable you want to pass out. Set the action schema variable equal to the corresponding App variable (e.g., `ActionSchema.finalDecision = App.finalDecision`). This correctly packages the data for the Orchestrator flow.
+      
