@@ -65,6 +65,9 @@ Before transferring the code to UiPath, you can **preview and debug** the app to
     2.  Open the file in the Chrome browser.
     3.  Right-click anywhere on the page and select **Inspect** to open the Developer Tools.
     4.  Go to the **Console** tab to see any JavaScript errors or `console.log` messages. This is where you can test the logic before putting it into UiPath.
+  * **Still running into issues?:**
+    1. Look at some of the examples like Depot Review and Journal Voucher Review and ask the agent to review the html/javascript in those to fix issues
+
 
 ***
 
@@ -138,3 +141,10 @@ Finally, you need to test the end-to-end process by connecting your app to a UiP
 4.  **Verify Data Flow:**
     * **Check Input:** Verify that the data passed into the app (e.g., `claimId`) is correctly displayed by your custom HTML component.
     * **Check Output:** Interact with your app, make a decision, and click the UiPath button. Submit the task and then check the workflow's output to confirm that the data (e.g., `finalDecision`) was passed out correctly.
+  
+    
+### Step 10:Add your task to repo
+
+Finally, once you have your task finished and working, please upload make add your task package (html, css, js) and any prompts that you found worked well to the repo. This will help the team build out better tasks, reuse examples, and develop better prompts
+  
+
