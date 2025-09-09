@@ -112,7 +112,7 @@ In the **Properties** panel, use the **External Scripts** and **External Stylesh
 This is a crucial step to link the HTML component to your UiPath workflow. The `App.setVariable` and `App.getVariable` functions can only interact with **App Variables**, not Action Schema variables directly. Therefore, you must create App Variables to serve as an intermediary.
 
 1.  In the UiPath Apps designer, go to the **Variables** section.
-2.  Create a new **App variable** for each variable you want to pass in or out. This must match the field names exactly that you passed into the cursor prompt for the fields.
+2.  Create a new **App variable** for each variable you want to pass in or out. ***This must match the field names exactly that you passed into the cursor prompt for the fields. MATCH THE FIELDS EXACTLY***
 3.  If you don't know what the fields are, search in the javascript for where the setVariable function is used. 
 <img width="885" height="1479" alt="image" src="https://github.com/user-attachments/assets/7bee2772-c26b-4edc-bd8d-ea1f6953b2f1" />
 
