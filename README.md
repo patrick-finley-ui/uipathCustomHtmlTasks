@@ -1,9 +1,60 @@
-### Transferring the Code to UiPath Action Center
 
-Once the AI IDE has provided the complete HTML, CSS, and JavaScript code in separate blocks, follow these steps to deploy it within UiPath.
+
+
+### Why Create a Custom HTML Component with an AI? 🤖
+Creating dynamic user experiences for human-in-the-loop tasks in Action Center is crucial for selling a modern, intuitive UX that gets people excited about review agents and automation outputs. While this has traditionally required deep knowledge of HTML, CSS, and JavaScript, using an AI IDE like **Cursor** changes the game. It allows you to build these components faster than ever, with **almost no coding knowledge**. The AI acts as your expert front-end developer, translating your requirements directly into a functional, professional-looking application.
 
 ***
 
+### What You Need to Get Started 🚀
+To get started, you need a focused understanding of what data you want to present, what data needs to be passed in, and what data needs to be passed out. This structured approach is your blueprint for the AI.
+
+1.  **Data to Present:** Determine what information the user needs to see. This data will be passed **in** from your UiPath workflow.
+2.  **User Inputs:** Define what actions or inputs the user needs to make. This could be a decision (`Approve`/`Reject`), comments in a text box, or a new value in a number field.
+3.  **Data to Pass Out:** Identify the specific data you need to collect from the user's inputs and pass **out** to the UiPath workflow.
+
+
+### Getting Your Environment Ready
+
+This section will help you set up your workspace and get the necessary files to begin prompting.
+
+1.  **Download and Install an AI IDE:**
+    * **Cursor:** A standalone AI-first code editor designed to work seamlessly with large language models.
+    * **VS Code with Extensions:** Install Visual Studio Code and add extensions like **GitHub Copilot Chat** or **Amazon Q**.
+    * **Claude Code:**
+
+2.  **Get the Project Files:**
+    * Navigate to the GitHub repository that contains this project's files.
+    * Download the repository as a `.zip` file.
+    * Unzip the folder to a location on your computer.
+
+3.  **Open the Project:**
+    * Open your chosen AI IDE.
+    * Go to **File** > **Open Folder** and select the unzipped project folder.
+
+4.  **Customize the Prompt:**
+    * Inside the project folder, you will find a file named `prompt.md`.
+    * Open this file. It contains the prompt template you'll use.
+    * **Adjust the template** by filling in the details for your specific task, including the name of the user, the variables you need to pass in and out, and the actions required.
+
+***
+
+### Building the App with the AI Agent
+
+This is where the magic happens. You'll use your prepared prompt to direct the AI agent in building the component.
+
+1.  **Start the Agent:** Open the AI chat panel within your IDE. In Cursor, for instance, you'll use the main chat window.
+2.  **Copy and Paste the Prompt:** Copy the customized prompt from your `prompt.md` file. Paste the entire content into the chat and press Enter. The AI will start building the code for your component.
+3.  **Watch the Code Build:** The AI will generate the HTML, CSS, and JavaScript files directly in your project folder, adhering to the structure and rules outlined in the `UiPath_Compatibility_Analysis.md` document.
+4.  **Iterate and Refine:** The first version may not be perfect. Use the chat to provide iterative instructions to the agent.
+    * **Example 1 (Design change):** "The buttons are too small. Make them more prominent and give them a green background for 'Approve' and a red background for 'Deny'."
+    * **Example 2 (Functionality change):** "Add an input field for the user to provide a reason for the denial. The field should be required only when the 'Deny' button is clicked."
+    * **Example 3 (Bug fix):** "The text area isn't updating the `reviewerComments` variable correctly. Fix the event listener to ensure it updates on blur."
+5.  **Finalize the Code:** Once you're satisfied with the design and functionality, ask the AI to provide the complete, final code in a single, well-commented block, organized by HTML, CSS, and JavaScript. This output is what you'll use to paste directly into UiPath Apps.
+
+
+### Transferring the Code to UiPath Action Center
+Once the AI IDE has provided the complete HTML, CSS, and JavaScript code in separate blocks, follow these steps to deploy it within UiPath.
 ### Step 1: Preview and Debug the App 🧪
 
 Before transferring the code to UiPath, you can **preview and debug** the app to ensure it works as expected. This saves time and helps you identify issues quickly.
