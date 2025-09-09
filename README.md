@@ -89,7 +89,6 @@ From the left-hand panel in the App designer, drag and drop a **Custom HTML** co
 1.  **Add CSS:** With the Custom HTML component selected, go to the right-hand **Properties** panel. Find the **CSS** section and paste the entire CSS code block.
 2.  **Add JavaScript:** Still in the **Properties** panel, find the **JS** section and paste the entire JavaScript code block.
 <img width="3478" height="1926" alt="image" src="https://github.com/user-attachments/assets/7291ae3b-4ace-45e1-be79-d854bc2d6266" />
-<img width="1060" height="416" alt="image" src="https://github.com/user-attachments/assets/f437b79c-d688-400e-90a5-63cc457727bb" />
 
 
 ***
@@ -103,6 +102,7 @@ Find the **Source** field in the Properties panel. Copy the content inside the `
 ### Step 6: Link External Resources 🔗
 
 In the **Properties** panel, use the **External Scripts** and **External Stylesheets** sections to add URLs for any external libraries.
+<img width="1060" height="416" alt="image" src="https://github.com/user-attachments/assets/f437b79c-d688-400e-90a5-63cc457727bb" />
 <img width="3438" height="1143" alt="image" src="https://github.com/user-attachments/assets/73fb20dc-8a54-4aa1-9bda-7a7d7f4ebce3" />
 
 ***
