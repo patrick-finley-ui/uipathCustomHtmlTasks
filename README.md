@@ -80,6 +80,7 @@ Navigate to the **UiPath App** in which you want to host the custom component. G
 ### Step 3: Add the Custom HTML Component
 
 From the left-hand panel in the App designer, drag and drop a **Custom HTML** component onto your page. Position the component where you want your application to appear. 
+<img width="924" height="1243" alt="image" src="https://github.com/user-attachments/assets/382cc364-109f-42aa-8d41-26cf848fe667" />
 
 ***
 
@@ -87,6 +88,9 @@ From the left-hand panel in the App designer, drag and drop a **Custom HTML** co
 
 1.  **Add CSS:** With the Custom HTML component selected, go to the right-hand **Properties** panel. Find the **CSS** section and paste the entire CSS code block.
 2.  **Add JavaScript:** Still in the **Properties** panel, find the **JS** section and paste the entire JavaScript code block.
+<img width="3478" height="1926" alt="image" src="https://github.com/user-attachments/assets/7291ae3b-4ace-45e1-be79-d854bc2d6266" />
+<img width="1060" height="416" alt="image" src="https://github.com/user-attachments/assets/f437b79c-d688-400e-90a5-63cc457727bb" />
+
 
 ***
 
@@ -99,6 +103,7 @@ Find the **Source** field in the Properties panel. Copy the content inside the `
 ### Step 6: Link External Resources 🔗
 
 In the **Properties** panel, use the **External Scripts** and **External Stylesheets** sections to add URLs for any external libraries.
+<img width="3438" height="1143" alt="image" src="https://github.com/user-attachments/assets/73fb20dc-8a54-4aa1-9bda-7a7d7f4ebce3" />
 
 ***
 
@@ -109,6 +114,7 @@ This is a crucial step to link the HTML component to your UiPath workflow. The `
 1.  In the UiPath Apps designer, go to the **Variables** section.
 2.  Create a new **App variable** for each variable you want to pass in or out. This must match the field names exactly that you passed into the cursor prompt for the fields.
 3.  If you don't know what the fields are, search in the javascript for where the setVariable function is used. 
+<img width="885" height="1479" alt="image" src="https://github.com/user-attachments/assets/7bee2772-c26b-4edc-bd8d-ea1f6953b2f1" />
 
 ***
 
@@ -124,6 +130,7 @@ If this component is part of an **Action Center task**, you must first create an
     * Go to the **Page**'s properties by selecting the page itself (not a component).
     * In the **Events** tab, find the `On Load` event.
     * Add a `Set Value` rule for each variable you are passing into the app from the Action Schema. Set the **App variable** equal to the **Action Schema variable** (e.g., `App.claimId = ActionSchema.claimId`). This ensures your HTML component's input variables are populated with the correct data when the user opens the task.
+<img width="2958" height="2067" alt="image" src="https://github.com/user-attachments/assets/54a88255-177e-4fde-a193-a07fb7433b2c" />
 
 3.  **Passing Data Out (on Submission): a UiPath Button:**
     * Place a standard **UiPath Button** outside of your Custom HTML component. This button will be your submit button.
