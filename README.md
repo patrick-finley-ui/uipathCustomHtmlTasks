@@ -37,7 +37,7 @@ This section will help you set up your workspace and get the necessary files to 
 4.  **Customize the Prompt:**
     * Inside the project folder, you will find a file named `promptExample.md`.
     * Open this file. It contains the prompt template you'll use.
-    * **Adjust the template** by filling in the details for your specific task, including the name of the user, the variables you need to pass in and out, and the actions required.
+    * **Adjust the template** by filling in the details for your specific task, including the name of the user, the variables you need to pass in and out, and the actions required. USE AI to help you re-write the prompt for you if you're feeling lazy!
 
 ***
 
