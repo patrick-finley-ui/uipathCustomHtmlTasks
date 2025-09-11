@@ -66,7 +66,7 @@ Clicking either button must trigger a custom confirmation modal before setting t
 
 Output Format (Pedagogical):
 
-Provide the complete, production-ready HTML, CSS, and JavaScript in a single, well-commented code block.
+Provide the complete, production-ready HTML, CSS, and JavaScript in3 seperate files!!!
 
 The comments should not only explain what the code does, but why it's written that way, explicitly referencing the rules from the UiPath_Compatibility_Analysis.md document (e.g., "Using if (element) check to follow the safe DOM access rule.").
 
