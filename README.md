@@ -24,6 +24,7 @@ This section will help you set up your workspace and get the necessary files to 
     * **Cursor:** A standalone AI-first code editor designed to work seamlessly with large language models.
     * **VS Code with Extensions:** Install Visual Studio Code and add extensions like **GitHub Copilot Chat** or **Amazon Q**.
     * **Claude Code:**
+    * **Gemini/Chatgpt: Easiest to copy the documentation from: UiPath_Compatibility_Analysis.md and append to the prompt. Or take existing example and ask chatbot to adjust**
 
 2.  **Get the Project Files:**
     * Navigate to the GitHub repository that contains this project's files.
